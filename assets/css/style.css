@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Bellota-LightItalic';
+    src: url('../fonts/Bellota-LightItalic.otf');
+}
+
+@font-face {
+    font-family: 'Bellota-BoldItalic';
+    src: url('../fonts/Bellota-BoldItalic.otf');
+}
+
+body {
+    background-color: #E6EAE8;
+}
+
+.top_bar {
+    font-family: Bellota-BoldItalic, sans-serif;
+    width: 100%;
+    min-width: 1050px;
+    height: 60px;
+    background-color: #6A95D9;
+    border-bottom: 0.25em solid #273c75;
+    margin: 0 0 100px 0;
+    display: inline-flex;
+    position: fixed;
+    z-index: 10;
+}
+
+.logo a {
+    font-family: Bellota-BoldItalic, sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+    color: #273c75;
+    text-shadow: #487eb0 0.5px 0.5px 0px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+nav {
+    float: right;
+    right: 1px;
+    position: absolute;
+    margin: 10px;
+    top: 5px;
+}
+
+nav a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    border-bottom: 7px solid #273c75;
+    color: #ffffff;
+}
+
+.wrapper {
+    margin: 0 auto;
+    top: 70px;
+    position: relative;
+    padding: 0 10px;
+    width: 75%;
+    min-width: 950px;
+}
+
+.column {
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px #d3d3d3;
+    z-index: -1;
+}
+
+.user_details {
+    font-family: Bellota-BoldItalic, sans-serif;
+    width: 280px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.user_details_left_right {
+    width: 125px;
+    display: inline-block;
+    position: absolute;
+}
+
+.user_details img {
+    height: 125px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.main_column {
+    font-family: Bellota-LightItalic, sans-serif;
+    float: right;
+    /*todo change if you must*/
+    margin-right: 80px;
+    width: 65%;
+    z-index: -1;
+    min-height: 60px;
+}
+
+.post_form {
+    width: 100%;
+}
+
+.post_form textarea {
+    font-family: Bellota-LightItalic, sans-serif;
+    width: 81%;
+    height: 60px;
+    border-radius: 3px;
+    margin-right: 5px;
+    border: 1px solid #d3d3d3;
+    font-size: 12px;
+    padding: 5px;
+}
+
+textarea:focus {
+    outline: 0;
+}
+
+.post_form input[type="submit"] {
+    font-family: Bellota-BoldItalic, sans-serif;
+    width: 11%;
+    height: 60px;
+    border: none;
+    border-radius: 3px;
+    background-color: #78A1DD;
+    color: #2C6c96;
+    text-shadow: #73b6e2 0.5px 0.5px 0px;
+    font-size: 90%;
+    position: absolute;
+    outline: 0;
+    margin: 0;
+}
+
+.post_form input[type="submit"]:active {
+    padding: 5px 4px 4px 5px;
+}
+
+.status_post {
+    width: 96%;
+    font-size: 15px;
+    padding: 0px 5px;
+    min-height: 75px;
+}
+
+.post_profile_pic {
+    float: left;
+    margin-right: 7px;
+}
+
+.post_profile_pic img {
+    border-radius: 25px;
+}
