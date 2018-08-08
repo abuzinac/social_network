@@ -112,6 +112,21 @@ class Post
                     $last_name = $user_row['last_name'];
                     $profile_pic = $user_row['profile_pic'];
 
+                    ?>
+                    <script>
+
+                        function toggle<?php echo $id; ?>() {
+                            var element = document.getElementById("toggleComment<?php echo $id; ?>");
+
+                            if (element.style.display === "block")
+                                element.style.display = "none";
+                            else
+                                element.style.display = "block";
+                        }
+
+                    </script>
+                    <?php
+
 
                     //Time frame
                     $date_time_now = date("Y-m-d H:i:s"); //todo change date format
@@ -162,7 +177,7 @@ class Post
                             $time_message = $interval->s . " seconds ago";
                         }
                     }
-                    $str .= "<div class ='status_post' xmlns=\"http://www.w3.org/1999/html\">
+                    $str .= "<div class ='status_post' onClick='javascript:toggle$id()'>
                         <div class='post_profile_pic'>
                             <img src='$profile_pic' width='50' alt='profile pic'>
                         </div>
@@ -176,6 +191,13 @@ class Post
                         </div>
                         
                      </div>
+                     
+                     <div class='post_comment' id='toggleComment$id' style='display:none'>
+                     
+                        <iframe src='comment_frame.php?post_id=$id' id='comment_iframe'></iframe>
+                     
+                     </div>
+                     
                      <hr>";
                 }
             } // End while loop
