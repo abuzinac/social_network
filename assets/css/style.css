@@ -144,6 +144,7 @@ textarea:focus {
     position: absolute;
     outline: 0;
     margin: 0;
+    cursor: pointer;
 }
 
 .post_form input[type="submit"]:active {
@@ -211,4 +212,35 @@ textarea:focus {
     padding: 0;
     text-decoration: none;
     border: none;
+}
+
+.newsfeedPostOptions iframe {
+    border: 0px;
+    height: 17px;
+    width: 120px;
+}
+
+.newsfeedPostOptions form {
+    position: absolute;
+    top: 0;
+}
+
+.comment_like {
+    font-family: Bellota-LightItalic, sans-serif;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    color: #78A1DD;
+    padding: 0;
+    height: auto;
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+}
+
+.like_value {
+    font-family: Bellota-LightItalic, sans-serif;
+    display: inline;
+    font-size: 14px;
+    color: #78A1DD;
 }
