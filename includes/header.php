@@ -3,6 +3,7 @@
 //todo we can change in to include
 require "config/config.php";
 
+
 if (isset($_SESSION['user_name'])) {
     $userLoggedIn = $_SESSION['user_name'];
 
@@ -28,6 +29,8 @@ if (isset($_SESSION['user_name'])) {
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/bootbox.min.js"></script>
+    <script src="assets/js/connect.js"></script>
 
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
@@ -47,10 +50,10 @@ if (isset($_SESSION['user_name'])) {
 
     <nav>
         <a href="<?php echo $userLoggedIn; ?>"><?php echo $user['first_name']; ?></a>
-        <a href="#"><i class="fas fa-envelope fa-lg"></i></a>
         <a href="index.php"><i class="fas fa-home fa-lg"></i></a>
+        <a href="#"><i class="fas fa-envelope fa-lg"></i></a>
         <a href="#"><i class="far fa-bell fa-lg"></i></a>
-        <a href="#"><i class="fas fa-users fa-lg"></i></a>
+        <a href="request.php"><i class="fas fa-users fa-lg"></i></a>
         <a href="#"><i class="fas fa-cog fa-lg"></i></a>
         <a href="includes/handlers/logout.php"><i class="fas fa-sign-out-alt fa-lg"></i></a>
     </nav>

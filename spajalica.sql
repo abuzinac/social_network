@@ -50,4 +50,10 @@ CREATE TABLE likes (
   post_id   INT         NOT NULL
 );
 
+CREATE TABLE friend_requests (
+  id        INT         NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  user_to   VARCHAR(50) NOT NULL,
+  user_from VARCHAR(50) NOT NULL
+)
+
 

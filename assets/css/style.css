@@ -156,7 +156,6 @@ textarea:focus {
     font-size: 15px;
     padding: 0px 5px;
     min-height: 75px;
-    cursor: pointer;
 }
 
 .post_profile_pic {
@@ -212,6 +211,7 @@ textarea:focus {
     padding: 0;
     text-decoration: none;
     border: none;
+    cursor: pointer;
 }
 
 .newsfeedPostOptions iframe {
@@ -239,8 +239,119 @@ textarea:focus {
 }
 
 .like_value {
-    font-family: Bellota-LightItalic, sans-serif;
+    font-family:sans-serif;
     display: inline;
     font-size: 14px;
     color: #78A1DD;
+}
+
+.profile_left {
+    top: -10px;
+    width: 17%;
+    max-width: 240px;
+    min-width: 130px;
+    height: 100vh;
+    float: left;
+    position: relative;
+    background-color: #6A95D9;
+    border-right: 7px solid #273C75;
+    color: #CBEAF8;
+    margin-right: 20px;
+}
+
+.profile_left img {
+    min-width: 80px;
+    width: 55%;
+    margin: 20%;
+    border: 3px solid #273C75;
+    border-radius: 100%;
+}
+
+.profile_info {
+    font-family: Bellota-BoldItalic, sans-serif;
+    display: list-item;
+    background-color: #273C75;
+    width: 100%;
+    padding: 10px 0 10px 0;
+}
+
+.profile_info p {
+    margin: 0 0 0 20px;
+    word-wrap: break-word;
+}
+
+.danger {
+    background-color: #e74c3c;
+}
+
+.warning {
+    background-color: #f0ad4e;
+}
+
+.default {
+    background-color: #bdc3c7;
+}
+
+.success {
+    background-color: #2ecc71;
+}
+
+.info {
+    background-color: #3498db;
+}
+
+.deep_blue {
+    background-color: #0043f0;
+}
+
+.profile_left input[type="submit"] {
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    margin: 7px 0 0 7px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+
+}
+
+#accept_button {
+    width: 20%;
+    height: 30px;
+    border-radius: 3px;
+    margin: 5px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #2ecc71;
+}
+
+#ignore_button {
+    width: 20%;
+    height: 30px;
+    border-radius: 3px;
+    margin: 5px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #e74c3c;
+}
+
+.delete_button {
+    height: 22px;
+    width: 22px;
+    padding: 0;
+    float: right;
+    border-radius: 3px;
+    right: -15px;
+    position: relative;
+    font-family: "Times New Roman",sans-serif;
+    cursor: pointer;
+}
+
+.profile_main_column {
+    min-width: 675px;
+    float: left;
+    width: 70%;
+    z-index: -1;
 }
