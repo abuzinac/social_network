@@ -20,8 +20,6 @@
 
 //todo we can change in to include
 require "config/config.php";
-include "includes/classes/User.php";
-include "includes/classes/Post.php";
 
 if (isset($_SESSION['user_name'])) {
     $userLoggedIn = $_SESSION['user_name'];

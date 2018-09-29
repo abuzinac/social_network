@@ -54,6 +54,17 @@ CREATE TABLE friend_requests (
   id        INT         NOT NULL PRIMARY KEY AUTO_INCREMENT,
   user_to   VARCHAR(50) NOT NULL,
   user_from VARCHAR(50) NOT NULL
-)
+);
+
+CREATE TABLE message (
+  id        INT         NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  user_to   VARCHAR(50) NOT NULL,
+  user_from VARCHAR(50) NOT NULL,
+  body      TEXT        NOT NULL,
+  date      DATETIME    NOT NULL,
+  opened    VARCHAR(3)  NOT NULL,
+  viewed    VARCHAR(3)  NOT NULL,
+  deleted   VARCHAR(3)  NOT NULL
+);
 
 

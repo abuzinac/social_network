@@ -2,13 +2,20 @@
   <dictionary name="abuzi">
     <words>
       <w>andrija</w>
+      <w>autocomplete</w>
       <w>bootbox</w>
+      <w>convos</w>
+      <w>dropdown</w>
       <w>fname</w>
+      <w>frameborder</w>
+      <w>iframe</w>
       <w>lname</w>
       <w>newsfeed</w>
+      <w>onkeyup</w>
       <w>signin</w>
       <w>signup</w>
       <w>spajalica</w>
+      <w>textarea</w>
     </words>
   </dictionary>
 </component>

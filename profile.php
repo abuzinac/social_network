@@ -1,7 +1,7 @@
 <?php
 include("includes/header.php");
-include "includes/classes/User.php";
-include "includes/classes/Post.php";
+
+$message_obj = new Message($con, $userLoggedIn);
 //session_destroy();
 
 if (isset($_GET['profile_username'])) {
@@ -26,6 +26,27 @@ if (isset($_POST['respond_request'])) {
     header("Location: request.php");
 }
 
+if(isset($_POST['post_message'])) {
+    $body = mysqli_real_escape_string($con, $_POST['message_body']);
+    $date = date("Y-m-d H:i:s");
+    $message_obj->sendMessage($username, $body, $date);
+
+    header("Location: profile.php?profile_username=$username&tab=m");
+}
+
+
+
+if(isset($_GET['tab']) && $_GET['tab'] == "m") {
+    $link = '#profileTabs a[href="#messages_div"]';
+
+    echo "<script>
+                 $(function() {
+                 $('" . $link ."').tab('show');
+                 history.pushState(null, null, '" . $username ."');
+                 });
+             </script>";
+}
+
 ?>
 
 <style type="text/css">
@@ -37,6 +58,8 @@ if (isset($_POST['respond_request'])) {
 
 <div class="profile_left">
     <img src="<?php echo $user_array['profile_pic']; ?>" alt="profile pic">
+
+    <!--todo make profile name and surname-->
 
     <div class="profile_info">
         <p><?php echo "Posts: " . $user_array['num_post']; ?></p>
@@ -69,13 +92,84 @@ if (isset($_POST['respond_request'])) {
         ?>
 
     </form>
+    <!-- post button-->
     <input type="submit" class="deep_blue" data-toggle="modal" data-target="#post_form" value="Post Something">
+
+    <?php
+
+    // display mutual friends on profile page
+    if ($userLoggedIn != $username) {
+        echo '<div class="profile_info_bottom">';
+        echo $logged_in_user_obj->getMutualFriends($username) . " Mutual friends";
+        echo '</div>';
+    }
+
+    ?>
+
 </div>
 
 
 <div class="profile_main_column column">
-    <div class="posts_area"></div>
-    <img id="loading" src="assets/images/icons/loading.gif" alt="loading">
+
+    <!-- tabs-->
+    <ul class="nav nav-tabs" role="tablist" id="profileTabs">
+        <li role="presentation" class="nav-item">
+            <a class="nav-link active" href="#newsfeed_div" aria-controls="newsfeed_div" role="tab" data-toggle="tab">Newsfeed</a>
+        </li>
+        <li role="presentation" class="nav-item">
+            <a class="nav-link" href="#about_div" aria-controls="about_div" role="tab" data-toggle="tab">About</a>
+        </li>
+        <li role="presentation" class="nav-item">
+            <a class="nav-link" href="#messages_div" aria-controls="messages_div" role="tab"
+               data-toggle="tab">Messages</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+
+        <div role="tabpanel" class="tab-pane fade in show active" id="newsfeed_div">
+            <div class="posts_area"></div>
+            <img id="loading" src="assets/images/icons/loading.gif" alt="loading">
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="about_div">
+
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="messages_div">
+            <?php
+
+            echo "<h4>You and <a href='" . $username . "'>" . $profile_user_obj->getFirstAndLastName() . "</a></h4><hr><br>";
+            echo "<div class='loaded_messages' id='scroll_messages'>";
+            echo $message_obj->getMessage($username);
+            echo "</div>";
+
+            ?>
+
+            <div class="message_post">
+
+                <form action="" method="POST">
+
+                    <textarea name='message_body' id='message_textarea' placeholder='Write your message ...'></textarea>
+                    <input type='submit' name='post_message' class='info' id='message_submit' value='Send'>
+
+                </form>
+
+            </div>
+
+
+            <!--after send message stay down with view-->
+            <script>
+                $('a[data-toggle="tab"]').on('shown.bs.tab', function () {
+                    var div = document.getElementById("scroll_messages");
+                    div.scrollTop = div.scrollHeight;
+                });
+            </script>
+        </div>
+
+    </div>
+
+
 </div>
 
 <!-- Modal -->
@@ -118,57 +212,57 @@ if (isset($_POST['respond_request'])) {
     var userLoggedIn = '<?php echo $userLoggedIn; ?>';
     var profileUsername = '<?php echo $username; ?>';
 
-        $(document).ready(function () {
-            $('#loading').show();
+    $(document).ready(function () {
+        $('#loading').show();
 
-            // Original ajax request for loading first posts
-            $.ajax({
-                url: "includes/handlers/ajax_load_profile_posts.php",
-                type: "POST",
-                data: "page=1&userLoggedIn=" + userLoggedIn + "&profileUsername=" + profileUsername,
-                cache: false,
+        // Original ajax request for loading first posts
+        $.ajax({
+            url: "includes/handlers/ajax_load_profile_posts.php",
+            type: "POST",
+            data: "page=1&userLoggedIn=" + userLoggedIn + "&profileUsername=" + profileUsername,
+            cache: false,
 
-                success: function (data) {
+            success: function (data) {
 
-                    $('#loading').hide();
-                    $('.posts_area').html(data);
+                $('#loading').hide();
+                $('.posts_area').html(data);
 
-                }
-            });
-
-            $(window).scroll(function () {
-                var height = $('.posts_area').height(); // div containing posts
-                var scroll_top = $(this).scrollTop();
-                var page = $('.posts_area').find('.nextPage').val();
-                var noMorePosts = $('.posts_area').find('.noMorePosts').val();
-
-                if ((document.body.scrollHeight == document.documentElement.scrollTop + window.innerHeight) && noMorePosts == 'false') {
-                    $('#loading').show();
-
-                    var ajaxReq = $.ajax({
-                        url: "includes/handlers/ajax_load_profile_posts.php",
-                        type: "POST",
-                        data: "page=" + page + "&userLoggedIn=" + userLoggedIn + "&profileUsername=" + profileUsername,
-                        cache: false,
-
-                        success: function (response) {
-
-                            $('.posts_area').find('.nextPage').remove(); // Removes current .nextPages
-                            $('.posts_area').find('.noMorePosts').remove();
-
-                            $('#loading').hide();
-                            $('.posts_area').append(response);
-
-                        }
-                    });
-
-                }  // End if statement
-
-                return false;
-
-            }); // End (window).scroll(function ()
-
+            }
         });
+
+        $(window).scroll(function () {
+            var height = $('.posts_area').height(); // div containing posts
+            var scroll_top = $(this).scrollTop();
+            var page = $('.posts_area').find('.nextPage').val();
+            var noMorePosts = $('.posts_area').find('.noMorePosts').val();
+
+            if ((document.body.scrollHeight == document.documentElement.scrollTop + window.innerHeight) && noMorePosts == 'false') {
+                $('#loading').show();
+
+                var ajaxReq = $.ajax({
+                    url: "includes/handlers/ajax_load_profile_posts.php",
+                    type: "POST",
+                    data: "page=" + page + "&userLoggedIn=" + userLoggedIn + "&profileUsername=" + profileUsername,
+                    cache: false,
+
+                    success: function (response) {
+
+                        $('.posts_area').find('.nextPage').remove(); // Removes current .nextPages
+                        $('.posts_area').find('.noMorePosts').remove();
+
+                        $('#loading').hide();
+                        $('.posts_area').append(response);
+
+                    }
+                });
+
+            }  // End if statement
+
+            return false;
+
+        }); // End (window).scroll(function ()
+
+    });
 
 </script>
 
