@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fde7adea-a31d-451c-bca0-85d34c5fa6d1" name="Default" comment="social network project">
-      <change afterPath="$PROJECT_DIR$/assets/css/jquery.Jcrop.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/jcrop_bits.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/jquery.Jcrop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/classes/Message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/handlers/ajax_friend_search.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94d90ac8-a9c3-4cba-911c-3634fcc0b7c6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/94d90ac8-a9c3-4cba-911c-3634fcc0b7c6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/abuzi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/abuzi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/connect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment_frame.php" beforeDir="false" afterPath="$PROJECT_DIR$/comment_frame.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/classes/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/like.php" beforeDir="false" afterPath="$PROJECT_DIR$/like.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/request.php" beforeDir="false" afterPath="$PROJECT_DIR$/request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spajalica.sql" beforeDir="false" afterPath="$PROJECT_DIR$/spajalica.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,21 +44,21 @@
     <session id="1445536174">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="41" />
+          <entry key="project.closed" value="49" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.10" value="6" />
+          <entry key="project.open.time.10" value="8" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="4" />
+          <entry key="project.open.time.7" value="6" />
           <entry key="project.open.time.8" value="10" />
-          <entry key="project.open.time.9" value="8" />
-          <entry key="project.opened" value="42" />
+          <entry key="project.open.time.9" value="11" />
+          <entry key="project.opened" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -106,7 +88,7 @@
         <counts>
           <entry key="css" value="4" />
           <entry key="gif" value="1" />
-          <entry key="htaccess" value="3" />
+          <entry key="htaccess" value="4" />
           <entry key="js" value="11" />
           <entry key="php" value="110" />
           <entry key="sql" value="5" />
@@ -123,7 +105,7 @@
           <entry key="PHP" value="110" />
           <entry key="SQL" value="4" />
           <entry key="Scratch" value="1" />
-          <entry key="htaccess" value="3" />
+          <entry key="htaccess" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class" />
@@ -136,10 +118,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="1148">
               <caret line="503" column="20" selection-start-line="503" selection-start-column="20" selection-end-line="503" selection-end-column="20" />
             </state>
           </provider>
@@ -148,7 +130,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/classes/Message.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="2645">
               <caret line="167" selection-start-line="167" selection-end-line="167" />
               <folding>
                 <element signature="n#__construct#0;n#Message#0;n#!!top" />
@@ -161,18 +143,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="63" lean-forward="true" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="46">
               <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/classes/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-506">
+            <state relative-caret-position="2392">
               <caret line="104" column="33" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
               <folding>
                 <element signature="n#loadProfilePosts#0;n#Post#0;n#!!top" />
@@ -184,7 +175,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/connect.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="1104">
               <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
             </state>
           </provider>
@@ -269,8 +260,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -438,6 +428,14 @@
       <workItem from="1538061799823" duration="107000" />
       <workItem from="1538073042570" duration="1088000" />
       <workItem from="1538255528497" duration="93000" />
+      <workItem from="1538505857816" duration="11000" />
+      <workItem from="1538505885642" duration="488000" />
+      <workItem from="1538604131073" duration="17000" />
+      <workItem from="1538766984848" duration="372000" />
+      <workItem from="1538767378128" duration="497000" />
+      <workItem from="1538856700643" duration="1208000" />
+      <workItem from="1538947003954" duration="10000" />
+      <workItem from="1538947038775" duration="1190000" />
     </task>
     <task id="LOCAL-00001" summary="social network project">
       <created>1533760481069</created>
@@ -492,7 +490,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207187000" />
+    <option name="totallyTimeSpent" value="210980000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -507,7 +505,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.14498934" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.11353944" />
       <window_info id="Structure" order="1" sideWeight="0.5005417" side_tool="true" weight="0.1748401" />
       <window_info id="Favorites" order="2" sideWeight="0.5005417" side_tool="true" weight="0.1748401" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -714,13 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="63" lean-forward="true" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Demo-as-of-notification-badge-styling.zip/Demo/includes/classes/Message.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Demo-as-of-notification-badge-styling.zip/Demo/messages.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Demo-as-of-notification-badge-styling.zip/Demo/includes/handlers/ajax_friend_search.php" />
@@ -752,16 +743,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="503" column="20" selection-start-line="503" selection-start-column="20" selection-end-line="503" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/classes/Message.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="2645">
           <caret line="167" selection-start-line="167" selection-end-line="167" />
           <folding>
             <element signature="n#__construct#0;n#Message#0;n#!!top" />
@@ -774,14 +758,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="46">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/classes/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2392">
+          <caret line="104" column="33" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
+          <folding>
+            <element signature="n#loadProfilePosts#0;n#Post#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/connect.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="1104">
           <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
         </state>
       </provider>
@@ -793,13 +787,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/classes/Post.php">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-506">
-          <caret line="104" column="33" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
-          <folding>
-            <element signature="n#loadProfilePosts#0;n#Post#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="46">
+          <caret line="2" column="63" lean-forward="true" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1148">
+          <caret line="503" column="20" selection-start-line="503" selection-start-column="20" selection-end-line="503" selection-end-column="20" />
         </state>
       </provider>
     </entry>
