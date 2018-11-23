@@ -15,7 +15,7 @@
     }
     form {
         position: absolute;
-        top: 1;
+        top: 1px;
     }
 </style>
 

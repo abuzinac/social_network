@@ -443,11 +443,10 @@ textarea:focus {
     color: #8c8c8c;
 }
 
-
 /*scroll bars*/
 /* width */
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 3px;
 }
 
 /* Track */
@@ -502,4 +501,31 @@ textarea:focus {
 
 .tab-content {
     margin-top: 25px;
+}
+
+.dropdown_data_window {
+    background-color: #FFFFFF;
+    border: 1px solid #DADADA;
+    border-radius: 0 0 8px 8px;
+    width: 300px;
+    position: absolute;
+    right: 10px;
+    top: 72px;
+    overflow: scroll;
+}
+
+.notification_badge {
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #FFFFFF;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #F00;
+    border-radius: 10px;
+    position: absolute;
+    left: 43%;
+    top: -5px;
 }

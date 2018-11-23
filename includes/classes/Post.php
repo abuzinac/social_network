@@ -149,9 +149,9 @@ class Post
                     $interval = $start_date->diff($end_date);// differences between dates
                     if ($interval->y >= 1) {
                         if ($interval == 1)
-                            $time_message = $interval->y . " year ago"; // 1 year ago
+                            $time_message = $interval->y . " year ago "; // 1 year ago
                         else
-                            $time_message = $interval->y . " years ago"; // 1+ year ago
+                            $time_message = $interval->y . " years ago "; // 1+ year ago
                     } elseif ($interval->m >= 1) {
                         if ($interval->d == 0) {
                             $days = " ago";
@@ -162,9 +162,9 @@ class Post
                         }
 
                         if ($interval->m == 1) {
-                            $time_message = $interval->m . " month" . $days;
+                            $time_message = $interval->m . " month " . $days;
                         } else {
-                            $time_message = $interval->m . " months" . $days;
+                            $time_message = $interval->m . " months " . $days;
                         }
                     } elseif ($interval->d >= 1) {
                         if ($interval->d == 1) {
